@@ -7,9 +7,9 @@ CClumpModelInfo* CModelInfo::AddClumpModel(int index)
 {
     CClumpModelInfo& pInfo = ms_clumpModelInfoStore.AddItem();
 
-    reinterpret_cast<void(__thiscall*)(CClumpModelInfo*)>(
+    /*reinterpret_cast<void(__thiscall*)(CClumpModelInfo*)>(
             g_libGTASA + (VER_x32 ? 0x003860A4 + 1 : 0x45CB60)
-    )(&pInfo);
+    )(&pInfo);*/ // crash
 
     pInfo.vtable = reinterpret_cast<uintptr_t>(reinterpret_cast<void *>(
             g_libGTASA + (VER_x32 ? 0x00667524 : 0x82F0A8)
